@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator" role="application">
+        <div class="display" id="display" aria-live="polite"></div>
+        <div class="buttons">
+            <!-- First Row: Clear and Operators -->
+            <button class="btn btn-clear" aria-label="Clear" onclick="clearDisplay()">C</button>
+            <button class="btn btn-operator" aria-label="Divide" onclick="appendToDisplay('/')">/</button>
+            <button class="btn btn-operator" aria-label="Multiply" onclick="appendToDisplay('*')">*</button>
+            <button class="btn btn-operator" aria-label="Subtract" onclick="appendToDisplay('-')">-</button>
+            
+            <!-- Second Row: Number Buttons 7, 8, 9, and Addition Operator -->
+            <button class="btn" aria-label="7" onclick="appendToDisplay('')">7</button>
+            <button class="btn" aria-label="8" onclick="appendToDisplay('')">8</button>
+            <button class="btn" aria-label="9" onclick="appendToDisplay('')">9</button>
+            <button class="btn btn-operator" aria-label="Add" onclick="appendToDisplay('+')">+</button>
+            
+            <!-- Third Row: Number Buttons 4, 5, 6, and Equals Button -->
+            <button class="btn" aria-label="4" onclick="appendToDisplay('')">4</button>
+            <button class="btn" aria-label="5" onclick="appendToDisplay('')">5</button>
+            <button class="btn" aria-label="6" onclick="appendToDisplay('')">6</button>
+            <button class="btn btn-equal" aria-label="Equal" onclick="calculateResult()">=</button>
+            
+            <!-- Fourth Row: Number Buttons 1, 2, 3, and Decimal Button -->
+            <button class="btn" aria-label="1" onclick="appendToDisplay('')">1</button>
+            <button class="btn" aria-label="2" onclick="appendToDisplay('')">2</button>
+            <button class="btn" aria-label="3" onclick="appendToDisplay('')">3</button>
+            <button class="btn btn-zero" aria-label="0" onclick="appendToDisplay('')" style="grid-column: span 2;">0</button>
+            <button class="btn" aria-label="Decimal" onclick="appendToDisplay('.')">.</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
